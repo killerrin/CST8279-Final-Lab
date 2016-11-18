@@ -1,0 +1,141 @@
+/* Universal Styles */
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a::visited,
+a::active {
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.btn {
+    margin-top: 5px;
+    margin-right: 2px;
+    padding: 2.5px;
+    border: 1px solid black;
+    background: slategray;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+/* Layout Styles */
+
+body header {
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    /*background: seagreen;*/
+    text-align: center;
+}
+
+body main {
+    width: 100%;
+}
+
+body footer {
+    width: 100%;
+    margin: 0;
+    padding: 5px;
+    /*background: seagreen;*/
+    text-align: center;
+}
+
+
+
+/* Modify the Form Descriptor */
+
+.formDescriptor {
+    width: 100%;
+    text-align: center;    
+
+    margin-bottom: 25px;
+}
+
+.formDescriptor h2 {
+    display: inline;
+    margin: 0;
+}
+
+.formDescriptor a {
+    margin-left: 5px;
+}
+
+
+/* Form */
+
+#courseEntryForm {
+    clear: both;
+    width: 100%;
+    text-align: center;
+}
+
+.inputGroup {
+    margin-bottom: 10px;
+}
+
+label {
+    display: inline-block;
+    width: 20%;
+}
+
+input[type=text],
+select {
+    width: 30%;
+}
+
+input[type=submit] {
+    margin: 0;
+    margin-left: 20%;
+    width: 30%;
+}
+
+.validationError {
+    color: darkred;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    margin-left: 10%;
+}
+
+
+/* Modify the Table Descriptor */
+
+.tableDescriptor {
+    width: 100%;
+}
+
+.tableDescriptor h2 {
+    display: inline;
+}
+
+.tableDescriptor a {
+    float: right;
+    text-align: right;
+}
+
+
+/* Setup the Zebra Stripes on the table */
+
+table {
+    width: 100%;
+    clear: left;
+}
+
+table thead tr {
+    background: slategray;
+    font-weight: bold;
+}
+
+table tbody tr:nth-of-type(even) {
+    background: lightgray;
+}
+
+tr td {
+    width: 15%;
+    text-align: center;
+}
