@@ -1,10 +1,14 @@
-//form element events
+/* Buttons */
 document.getElementById("saveButton").addEventListener("click", function (e) {
     if (validate.validateAll()) {
         alert("Thank You!");
     } else {
         e.preventDefault();
     }
+});
+
+document.getElementById("resetButton").addEventListener("click", function (e) {
+    validate.clearErrors();
 });
 
 /* Text Fields */
