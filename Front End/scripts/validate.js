@@ -1,4 +1,4 @@
-var validationErrorControllerConstructor = function (errorMessage, validationErrorElement, inputElement) {
+function validationErrorControllerConstructor(errorMessage, validationErrorElement, inputElement) {
     return {
         /// Aggregate Functions
         displayError: function () {
