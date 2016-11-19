@@ -1,28 +1,38 @@
 var validationErrorControllerConstructor = function (errorMessage, validationErrorElement, inputElement) {
     return {
+        /// Aggregate Functions
         displayError: function () {
-            validationErrorElement.innerHTML = errorMessage;
+            this.showErrorMessage(errorMessage);
             this.showErrorBorder();
         },
 
-        displayCustomError: function(customMessage) {
-            validationErrorElement.innerHTML = customMessage;
+        displayCustomError: function (customMessage) {
+            this.showErrorMessage(customMessage);
             this.showErrorBorder();
         },
 
         clearError: function () {
-            validationErrorElement.innerHTML = "";
+            this.hideErrorMessage();
             this.hideErrorBorder();
         },
 
-        showErrorBorder : function() {
+        /// Error Borders
+        showErrorBorder: function () {
             inputElement.classList.add("validationErrorBorder");
         },
 
-        hideErrorBorder : function() {
+        hideErrorBorder: function () {
             inputElement.classList.remove("validationErrorBorder");
-        }
+        },
 
+        /// Error Messages
+        showErrorMessage: function (message) {
+            validationErrorElement.innerHTML = message;
+        },
+
+        hideErrorMessage: function () {
+            validationErrorElement.innerHTML = "";
+        }
     }
 }
 
@@ -96,6 +106,7 @@ var validate = (function () {
             return true;
         },
 
+        /// Aggregate Functions
         validateAll: function () {
             var valid = true;
 
@@ -120,6 +131,22 @@ var validate = (function () {
             }
 
             return valid;
+        },
+
+        showErrors: function () {
+            this.errorMessageFirstName.displayError();
+            this.errorMessageLastName.displayError();
+            this.errorMessageCourseName.displayError();
+            this.errorMessageWorkType.displayError();
+            this.errorMessageGrades.displayError();
+        },
+
+        clearErrors: function () {
+            this.errorMessageFirstName.clearError();
+            this.errorMessageLastName.clearError();
+            this.errorMessageCourseName.clearError();
+            this.errorMessageWorkType.clearError();
+            this.errorMessageGrades.clearError();
         }
     };
 }());
