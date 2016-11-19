@@ -17,20 +17,19 @@
             <h2>Course Entry Form</h2>
             <a href="display.html" class="btn">Display Results</a>
         </div>
-
         <form name="courseEntryForm" id="courseEntryForm">
             <div class="inputGroup" id="firstNameInputGroup">
-                <label for="firstName">*First Name</label>
-                <input type="text" id="firstName" name="firstName">
+                <label for="firstName" class="required">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="First Name">
                 <p class="validationError"></p>
             </div>
             <div class="inputGroup" id="lastNameInputGroup">
-                <label for="lastName">*Last Name</label>
-                <input type="text" id="lastName" name="lastName">
+                <label for="lastName" class="required">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name">
                 <p class="validationError"></p>
             </div>
             <div class="inputGroup" id="courseNameInputGroup">
-                <label for="courseName">*Course Name</label>
+                <label for="courseName" class="required">Course Name</label>
                 <select id="courseName" name="courseName">
                     <option value="">Select A Course</option>
                     <option value="MAD9013">MAD9013 Cross-Platform Web Development</option>
@@ -41,7 +40,7 @@
                 <p class="validationError"></p>
             </div>
             <div class="inputGroup" id="workTypeInputGroup">
-                <label for="workType">*Work Type</label>
+                <label for="workType" class="required">Work Type</label>
                 <select id="workType" name="workType">
                     <option value="">Select Work Type</option>
                     <option value="Assignments">Assignments</option>
@@ -50,19 +49,23 @@
                 </select>
                 <p class="validationError"></p>
             </div>
-            <div class="inputGroup" id="gradeInputGroup">
-                <label for="grade">*Grade</label>
-                <input type="text" id="grade" name="grade">
+            <div class="inputGroup" id="gradesInputGroup">
+                <label for="grades" class="required">Grades</label>
+                <input type="text" id="grades" name="grades" placeholder="Grades">
                 <p class="validationError"></p>
             </div>
+            
             <div class="inputGroup" id="submitInputGroup">
-                <input type="submit" value="Save">
+                <input type="submit" value="Save" id="saveButton" name="saveButton">
+                <input type="reset" value="Reset" id="resetButton" name="resetButton">
             </div>
         </form>
     </main>
     <footer>
         <p>&copy; Andrew Godfroy</p>
     </footer>
+    <script src="scripts/validate.js"></script>
+    <script src="scripts/events.js"></script>
 </body>
 
 </html>
