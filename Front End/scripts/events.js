@@ -13,22 +13,22 @@ document.getElementById("resetButton").addEventListener("click", function (e) {
 
 /* Text Fields */
 document.getElementById("firstName").addEventListener("input", function (e) {
-    validate.validateFirstName()
+    validate.validateFirstName();
 });
 
 document.getElementById("lastName").addEventListener("input", function (e) {
-    validate.validateLastName()
+    validate.validateLastName();
 });
 
 document.getElementById("grades").addEventListener("input", function (e) {
-    validate.validateGrades()
+    validate.validateGrades();
 });
 
 /* Selects */
 document.getElementById("courseName").addEventListener("change", function (e) {
-    validate.validateCourseName()
+    validate.validateCourseName();
 });
 
 document.getElementById("workType").addEventListener("change", function (e) {
-    validate.validateWorkType()
+    validate.validateWorkType();
 });
