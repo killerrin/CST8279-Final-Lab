@@ -38,7 +38,7 @@ function validationErrorControllerConstructor(errorMessage, validationErrorEleme
 
 var validate = (function () {
     var getValidationErrorElement = function (inputElement) {
-        var parent = inputElement.parentNode
+        var parent = inputElement.parentNode;
         for (var i = 0; i < parent.children.length; i++) {
             var childElement = parent.children[i];
             if (childElement.classList.contains("validationError")) {
@@ -98,10 +98,17 @@ var validate = (function () {
         errorMessageGrades: validationErrorControllerConstructor("You are required to enter Grade(s)", getValidationErrorElement(form["grades"]), form["grades"]),
         validateGrades: function () {
             var field = form["grades"];
+            var regExp = /^[0-9.,\s\-]+$/;
+            
             if (field.value == null || field.value == "") {
                 this.errorMessageGrades.displayError();
                 return false;
             }
+            else if (!regExp.test(field.value)) {
+                this.errorMessageGrades.displayCustomError("This field contains invalid characters. Only spaces 0-9 -., are allowed");
+                return false;
+            }
+
             this.errorMessageGrades.clearError();
             return true;
         },
