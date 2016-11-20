@@ -1,4 +1,6 @@
-﻿// Recieved Pure Javascript HTTPGET code from http://stackoverflow.com/questions/247483/http-get-request-in-javascript
+﻿var WebsiteURL = "http://192.168.2.120/8279/"
+
+// Recieved Pure Javascript HTTPGET code from http://stackoverflow.com/questions/247483/http-get-request-in-javascript
 function httpGet(theUrl) {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open("GET", theUrl, false);
