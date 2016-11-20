@@ -12,3 +12,9 @@ workType = form["workType"].value
 grades = form["grades"].value
 
 print("Location: ../index.html")
+print("Content-type: text/html\n\n")
+#print(firstName)
+#print(lastName)
+#print(courseName)
+#print(workType)
+#print(grades)
