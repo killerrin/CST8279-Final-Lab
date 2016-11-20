@@ -5,7 +5,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>24f59205-aaab-40c7-8666-462f9ab93191</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>www.py</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -22,7 +23,21 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="www.py" />
+    <Compile Include="backend\courses.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="backend\" />
+    <Folder Include="css\" />
+    <Folder Include="scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="css\main.css" />
+    <Content Include="display.html" />
+    <Content Include="index.html" />
+    <Content Include="scripts\course.js" />
+    <Content Include="scripts\displayCourseInfo.js" />
+    <Content Include="scripts\events.js" />
+    <Content Include="scripts\validate.js" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
