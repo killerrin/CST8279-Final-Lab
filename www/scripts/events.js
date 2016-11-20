@@ -1,7 +1,7 @@
 /* Buttons */
 document.getElementById("saveButton").addEventListener("click", function (e) {
     if (validate.validateAll()) {
-        alert("Thank You!");
+        //alert("Thank You!");
     } else {
         e.preventDefault();
     }

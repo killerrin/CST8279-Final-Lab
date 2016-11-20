@@ -1,9 +1,14 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import cgitb
 import cgi
 
 cgitb.enable()
 form = cgi.FieldStorage()
 
-text = form["firstName"]
-print("<h1>"+text+"</h1>")
+firstName = form["firstName"].value
+lastName = form["lastName"].value
+courseName = form["courseName"].value
+workType = form["workType"].value
+grades = form["grades"].value
+
+print("Location: ../index.html")
