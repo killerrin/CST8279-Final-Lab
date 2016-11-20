@@ -1,5 +1,4 @@
 ﻿var displayCourse = (function () {
-
     var clear = function () {
         var tableBody = document.getElementById("tableDisplayBody");
         while (tableBody.firstChild) {
@@ -58,6 +57,7 @@
         });
     };
 
+    clear();
     display();
 
     return {
