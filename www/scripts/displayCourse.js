@@ -10,6 +10,7 @@
     var display = function () {
         httpGetAsync("example.com", function(response) {
             // Parse the response back into a Javascript Object
+            // http://codehandbook.org/javascript-json-array-revisited/
             var responseObject = JSON.parse(response);
 
             // Conver those to Course Objects
