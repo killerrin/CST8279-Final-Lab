@@ -1,4 +1,4 @@
-﻿var displayCourse = (function () {
+﻿var displayStudents = (function () {
     var clear = function () {
         var tableBody = document.getElementById("tableDisplayBody");
         while (tableBody.firstChild) {
@@ -7,26 +7,26 @@
     };
 
     var display = function () {
-        httpGetAsync(WebsiteURL + "backend/getCourseData.py", function(response) {
+        httpGetAsync(WebsiteURL + "backend/getStudentData.py", function(response) {
             // Parse the response back into a Javascript Object
             // http://codehandbook.org/javascript-json-array-revisited/
             var responseObject = JSON.parse(response);
 
-            // Conver those to Course Objects
-            var courseArray = new Array();
+            // Convert those to Student Objects
+            var studentArray = new Array();
             for(var i = 0; i < responseObject.length; i++) {
-                var course = courseConstructor(
+                var course = studentConstructor(
                     responseObject[i].firstName,
                     responseObject[i].lastName,
                     responseObject[i].courseName,
                     responseObject[i].workType,
                     responseObject[i].grade);
-                courseArray.push(course);
+                studentArray.push(course);
             }
 
-            // For all of the elements in the CourseArray, create the Table Row and Append it
+            // For all of the elements in the studentArray, create the Table Row and Append it
             var tableBody = document.getElementById("tableDisplayBody");
-            for(var i = 0; i < courseArray.length; i++) {
+            for(var i = 0; i < studentArray.length; i++) {
                 // Create the Row
                 var newRow = document.createElement("tr");
                 
@@ -38,11 +38,11 @@
                 var grade = document.createElement("td");
 
                 // Assign the Elements InnerHTML
-                firstName.innerHTML = courseArray[i].firstName;
-                lastName.innerHTML = courseArray[i].lastName;
-                courseName.innerHTML = courseArray[i].courseName;
-                workType.innerHTML = courseArray[i].workType;
-                grade.innerHTML = courseArray[i].getAlphaGrade();
+                firstName.innerHTML = studentArray[i].firstName;
+                lastName.innerHTML = studentArray[i].lastName;
+                courseName.innerHTML = studentArray[i].courseName;
+                workType.innerHTML = studentArray[i].workType;
+                grade.innerHTML = studentArray[i].getAlphaGrade();
 
                 // Append the children to the Row
                 newRow.appendChild(firstName);

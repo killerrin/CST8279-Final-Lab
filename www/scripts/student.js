@@ -1,4 +1,4 @@
-function courseConstructor(firstName, lastName, courseName, workType, grade) {
+function studentConstructor(firstName, lastName, courseName, workType, grade) {
     return {
         firstName: firstName,
         lastName : lastName,
