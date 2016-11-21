@@ -4,7 +4,6 @@ import cgi
 import sqlite3
 import json
 
-# Reference http://stackoverflow.com/questions/4315900/how-can-i-send-a-json-object-from-a-python-script-to-jquery
 print("Content-type: application/json")
 print("")
 
@@ -23,5 +22,4 @@ with con:
                 
 con.close()
 
-#response = {"Price":54, "Cost":'99'}
 print(json.JSONEncoder().encode(students))
