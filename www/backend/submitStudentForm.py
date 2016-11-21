@@ -6,7 +6,7 @@ import sqlite3
 cgitb.enable()
 form = cgi.FieldStorage()
 
-# Get all the Forms
+# Get all the Form Data
 firstName = form["firstName"].value
 lastName = form["lastName"].value
 courseName = form["courseName"].value
