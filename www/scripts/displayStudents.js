@@ -7,7 +7,7 @@
     };
 
     var display = function () {
-        httpGetAsync(WebsiteURL + "backend/getStudentData.py", function(response) {
+        httpGetAsync(getDomainNameAndFolder() + "backend/getStudentData.py", function(response) {
             // Parse the response back into a Javascript Object
             // http://codehandbook.org/javascript-json-array-revisited/
             var responseObject = JSON.parse(response);

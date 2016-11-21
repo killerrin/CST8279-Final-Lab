@@ -1,4 +1,10 @@
-﻿var WebsiteURL = "http://192.168.2.120/8279/"
+﻿function getDomainNameAndFolder() {
+    //var WebsiteURL = "http://192.168.2.120/8279/";
+    //WebsiteURL = "http://127.0.0.1/8279/";
+    var loc = window.location.pathname;
+    var dir = loc.substring(0, loc.lastIndexOf('/'));
+    return dir;
+}
 
 // Recieved Pure Javascript HTTPGET code from http://stackoverflow.com/questions/247483/http-get-request-in-javascript
 function httpGet(theUrl) {
