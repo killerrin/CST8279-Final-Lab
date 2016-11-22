@@ -19,7 +19,9 @@ with con:
         if row == None:
             break
         students.append({"firstName":row[1], "lastName":row[2], "courseName":row[3], "workType":row[4], "grade":row[5]})
-                
-con.close()
+
+# Close the Connection if it Exists        
+if con:
+    con.close()
 
 print(json.JSONEncoder().encode(students))

@@ -25,7 +25,10 @@ con = sqlite3.connect("admin/CST8279.db")
 with con:
     cur = con.cursor()
     cur.execute("INSERT INTO Students (FirstName, LastName, Course, WorkType, Grade) VALUES('{0}', '{1}', '{2}', '{3}', {4})".format(firstName, lastName, courseName, workType, parsedGrade))
-con.close()
+
+# Close the Connection if it Exists
+if con:
+    con.close()
 
 # Redirect back to the Form
 print("Location: ../index.html")
