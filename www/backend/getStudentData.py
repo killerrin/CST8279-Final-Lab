@@ -12,13 +12,17 @@ students = []
 con = sqlite3.connect("admin/CST8279.db")
 with con:
     cur = con.cursor()
-    cur.execute("SELECT * FROM Students")   
+    cur.execute("SELECT FirstName, LastName, Courses.Id, Courses.Name, WorkTypes.Name, Grade\
+    FROM Students\
+    JOIN Courses ON Students.CourseCode = Courses.Id\
+    JOIN WorkTypes ON Students.WorkTypeID = WorkTypes.Id")   
     
     while True:
         row = cur.fetchone()
         if row == None:
             break
-        students.append({"firstName":row[1], "lastName":row[2], "courseName":row[3], "workType":row[4], "grade":row[5]})
+        #print(row)
+        students.append({"firstName":row[0], "lastName":row[1], "courseName":row[2] + ": " + row[3], "workType":row[4], "grade":row[5]})
 
 # Close the Connection if it Exists        
 if con:

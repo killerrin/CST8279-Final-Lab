@@ -24,7 +24,7 @@ parsedGrade = parsedGrade / len(splitGrades)
 con = sqlite3.connect("admin/CST8279.db")
 with con:
     cur = con.cursor()
-    cur.execute("INSERT INTO Students (FirstName, LastName, Course, WorkType, Grade) VALUES('{0}', '{1}', '{2}', '{3}', {4})".format(firstName, lastName, courseName, workType, parsedGrade))
+    cur.execute("INSERT INTO Students (FirstName, LastName, Grade, CourseCode, WorkTypeID) VALUES('{0}', '{1}', {2}, '{3}', {4})".format(firstName, lastName, parsedGrade, courseName, workType))
 
 # Close the Connection if it Exists
 if con:
