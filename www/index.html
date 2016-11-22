@@ -17,7 +17,7 @@
             <h2>Student Entry Form</h2>
             <a href="display.html" class="btn">Display Results</a>
         </div>
-        <form name="courseEntryForm" id="courseEntryForm" action="backend/submitStudentForm.py" method="POST">
+        <form name="courseEntryForm" id="courseEntryForm" action="backend/postStudentForm.py" method="POST">
             <div class="inputGroup" id="firstNameInputGroup">
                 <label for="firstName" class="required">First Name</label>
                 <input type="text" id="firstName" name="firstName" placeholder="First Name ... ex: John">
@@ -32,10 +32,10 @@
                 <label for="courseName" class="required">Course Name</label>
                 <select id="courseName" name="courseName">
                     <option value="">Select A Course</option>
-                    <option value="MAD9013">MAD9013 Cross-Platform Web Development</option>
+                    <!--<option value="MAD9013">MAD9013 Cross-Platform Web Development</option>
                     <option value="CST8209">CST8209 Web Programming 1</option>
                     <option value="CST8260">CST8260 Database System and Concepts</option>
-                    <option value="CST8279">CST8279 Introduction to Computer Programming Using Python</option>
+                    <option value="CST8279">CST8279 Introduction to Computer Programming Using Python</option>-->
                 </select>
                 <p class="validationError"></p>
             </div>
@@ -43,9 +43,9 @@
                 <label for="workType" class="required">Work Type</label>
                 <select id="workType" name="workType">
                     <option value="">Select Work Type</option>
-                    <option value="1">Assignments</option>
+                    <!--<option value="1">Assignments</option>
                     <option value="2">Midterms</option>
-                    <option value="3">Final Exam</option>
+                    <option value="3">Final Exam</option>-->
                 </select>
                 <p class="validationError"></p>
             </div>
@@ -67,6 +67,7 @@
     <script src="scripts/student.js"></script>
     <script src="scripts/validate.js"></script>
     <script src="scripts/events.js"></script>
+    <script src="scripts/studentForm.js"></script>
 </body>
 
 </html>

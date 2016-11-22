@@ -22,7 +22,7 @@ with con:
         if row == None:
             break
         #print(row)
-        students.append({"firstName":row[0], "lastName":row[1], "courseName":row[2] + ": " + row[3], "workType":row[4], "grade":row[5]})
+        students.append({"firstName":row[0], "lastName":row[1], "courseCode":row[2], "courseName":row[3], "workType":row[4], "grade":row[5]})
 
 # Close the Connection if it Exists        
 if con:

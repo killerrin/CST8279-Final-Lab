@@ -7,7 +7,7 @@
     };
 
     var display = function () {
-        httpGetAsync(getDomainNameAndFolder() + "backend/getStudentData.py", function(response) {
+        httpGetAsync(getDomainNameAndFolder() + "/backend/getStudents.py", function(response) {
             // Parse the response back into a Javascript Object
             // http://codehandbook.org/javascript-json-array-revisited/
             var responseObject = JSON.parse(response);
@@ -18,7 +18,7 @@
                 var course = studentConstructor(
                     responseObject[i].firstName,
                     responseObject[i].lastName,
-                    responseObject[i].courseName,
+                    responseObject[i].courseCode + " - " + responseObject[i].courseName,
                     responseObject[i].workType,
                     responseObject[i].grade);
                 studentArray.push(course);
