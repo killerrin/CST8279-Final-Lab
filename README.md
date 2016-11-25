@@ -1,4 +1,4 @@
-# CST8279 Fiinal Lab
+# CST8279 Final Lab
 Apache Web Server
 Python Backend
 SQLite3 Database
